@@ -1,16 +1,16 @@
-import Employee from './employee.js';
+import Employee from '../dto/employee.js';
 
 class EmployeeGenerator {
     constructor(random) {
         this.random = random;
     }
 
-    getRandomEmployee() {
-        const id = this.random(1, 10000);
+    getRandomEmployee(minId=1, maxId=10000, minSalary=1000, maxSalary=100000) {
+        const id = this.random(minId, maxId);
         const emailAddress = `email${id}@gmail.com`;
         const gender = this.random(0, 1) ? 'female' : 'male';
         const name = `Employee_${id}`;
-        const salary = this.random(30000, 100000);
+        const salary = this.random(minSalary, maxSalary);
         const titles = ['Wage Employee', 'Manager', 'Sales Person', 'Sales Manager'];
         const title = titles[this.random(0, titles.length - 1)];
 

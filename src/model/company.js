@@ -4,7 +4,8 @@ class Company {
     }
 
     hire(employee) {
-        if (this.data[employee.getId()]) return false;
+        if (this.data[employee.getId()])
+            throw new Error('Employee "' + employee.getId() + '" already exists');
         this.data[employee.getId()] = employee;
         return true;
     }
