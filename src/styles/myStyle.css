@@ -46,8 +46,11 @@ li {
     margin-top: 20vh;
 }
 
-#employeeDataBtn, #randomEmployeeBtn{
+#employeeDataBtn, #randomEmployeeBtn, #showListEmployee{
     margin: 1vh;
     padding:15px;
     width: 300px;
+}
+ #randomEmployeeBtn #hide{
+    display: none;
 }

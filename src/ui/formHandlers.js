@@ -26,29 +26,3 @@ export function handleEmployeeDataFormSubmit(company) {
     });
 }
 
-export function handleRandomEmployeeFormSubmit(company, employeeGenerator) {
-    const randomEmployeeForm = document.getElementById('randomEmployeeForm');
-    randomEmployeeForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const idDigits = e.target.idDigits.value;
-        const numEmployees = e.target.numEmployees.value;
-        const minSalary = parseFloat(e.target.minSalary.value);
-        const maxSalary = parseFloat(e.target.maxSalary.value);
-        const minId = Math.pow(10, idDigits - 1);
-        const maxId = Math.pow(10, idDigits) - 1;
-
-        for (let i = 0; i < numEmployees; i++) {
-            try {
-                const employee = employeeGenerator.getRandomEmployee(minId, maxId, minSalary, maxSalary);
-                company.hire(employee);
-            }catch(error) {
-                alert(error.message);
-            }
-        }
-
-        viewerEmployees(company);
-        randomEmployeeForm.reset();
-        document.getElementById('randomEmployeeModal').style.display = 'none';
-    });
-}

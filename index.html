@@ -13,17 +13,13 @@
 <div id="employees-container">
     <div id="card">
         <div id="buttons">
-            <button id="employeeDataBtn" class="btn btn-primary">Employee Data Form</button>
-            <button id="randomEmployeeBtn" class="btn btn-secondary">Random Employee Form</button>
         </div>
     </div>
 
-    <div id="list-employee">
-<!--        <h1>Employees list</h1>-->
+    <div id="list-employee" class="modal-layer">
         <ul id="list"></ul>
     </div>
 </div>
-
 
 <div id="employeeDataModal" class="modal-layer">
     <div class="modal-content">
@@ -73,37 +69,6 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="reset" class="btn btn-secondary">Reset</button>
-        </form>
-    </div>
-</div>
-
-<!-- Random Employee -->
-<div id="randomEmployeeModal" class="modal-layer">
-    <div class="modal-content">
-        <h2>Random Employee</h2>
-        <form id="randomEmployeeForm" action="#" class="form-order">
-            <div class="form-group">
-                <label>Number of digits in employee's ID</label>
-                <input type="number" name="idDigits" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label>Number of employees</label>
-                <input type="number" name="numEmployees" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label>Minimal salary value</label>
-                <input type="number" name="minSalary" class="form-control" required>
-            </div>
-
-            <div class="form-group">
-                <label>Maximal salary value</label>
-                <input type="number" name="maxSalary" class="form-control" required>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Generate</button>
             <button type="reset" class="btn btn-secondary">Reset</button>
         </form>
     </div>
