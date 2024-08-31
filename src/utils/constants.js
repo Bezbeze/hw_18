@@ -1,0 +1,1 @@
+export const arrTabHeader = ['id','email', 'gender', 'name', 'salary', 'titles'];

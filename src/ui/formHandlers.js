@@ -1,7 +1,6 @@
 import Employee from '../dto/employee.js';
-import { viewerEmployees } from './Viewer.js';
 
-export function handleEmployeeDataFormSubmit(company) {
+export function handleEmployeeDataFormSubmit(company, tableCreator) {
     const employeeDataForm = document.getElementById('employeeDataForm');
     employeeDataForm.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -16,7 +15,7 @@ export function handleEmployeeDataFormSubmit(company) {
         try {
             const employee = new Employee(id, email, gender, name, salary, title);
             company.hire(employee);
-            viewerEmployees(company);
+            tableCreator.addRow(employee);
             employeeDataForm.reset();
         } catch (error) {
             alert(error.message);

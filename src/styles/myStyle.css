@@ -4,19 +4,6 @@ body {
     margin: 0;
     padding: 20px;
 }
-
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background: #fff;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 .modal-layer {
     display: none;
     position: fixed;
@@ -31,7 +18,7 @@ li {
 }
 
 .modal-content {
-    background-color: #fff;
+    background-color: rgba(239, 251, 193, 0.90);
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -54,3 +41,6 @@ li {
  #randomEmployeeBtn #hide{
     display: none;
 }
+ #list-employee{
+     background-color: rgba(239, 251, 193, 0.71);
+ }
